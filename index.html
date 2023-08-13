@@ -1,0 +1,53 @@
+<!-- <?php
+include("DbConnect.php");
+include("Login.php");
+?>
+
+-->
+
+<! DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiva="X-UA-Compatible" content="IE=edge">
+    <title> Edappetta </title>
+    <link rel="stylesheet" type="text/css" href="EdStyle.css">  
+</head>
+<body>
+    <div id="form">
+    <h1> Login Form </h1>
+    
+    <!-- <form name="form" action="Login.php" onsubmit="return isvalid()" method="POST">  -->
+    <form name="form" action="" onsubmit="return isvalid()" method="POST">
+        <label> User Name : </label>
+        <input type="text" id="user" name="user"><br><br>
+        <label> * Password : </label>
+        <input type="password" id="pass" name="pass"> <br><br>
+        <input type="submit" id="btn" name="submit" value="Log in">
+    </form>
+
+    </div>
+
+        <script>
+            function isvalid(){
+                var user = document.form.user.value;
+                var pass = document.form.pass.value;
+                if(user.length=="" && pass.length==""){
+                    alert(" Username and password field is empty!!!");
+                    return false;
+                }
+                else if(user.length==""){
+                    alert(" Username field is empty!!!");
+                    return false;
+                }
+                else if(pass.length==""){
+                    alert(" Password field is empty!!!");
+                    return false;
+                }
+                
+            }
+        </script>
+
+</body>
+</html>
+
