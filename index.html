@@ -1,10 +1,3 @@
-<!-- <?php
-include("DbConnect.php");
-include("Login.php");
-?>
-
--->
-
 <! DOCTYPE html>
 <html lang="en">
  <head>
@@ -18,7 +11,7 @@ include("Login.php");
     <h1> Login Form </h1>
     
     <!-- <form name="form" action="Login.php" onsubmit="return isvalid()" method="POST">  -->
-    <form name="form" action="" onsubmit="return isvalid()" method="POST">
+    <form name="form" action="" onsubmit="LogingIn(isvalid())" method="POST">
         <label> User Name : </label>
         <input type="text" id="user" name="user"><br><br>
         <label> * Password : </label>
@@ -29,7 +22,24 @@ include("Login.php");
     </div>
 
         <script>
-            function isvalid(){
+        function LogingIn(valiD){
+                if(valiD){
+           
+                    var user = document.form.user.value;    
+                    var pass = document.form.pass.value;
+                    if (user==='anvar'){
+                        if(pass==='admin'){
+                            alert ("login Success  Mr. Anvar");
+                        }
+                        else{
+                            alert ("Invalied Password Mr. Anvar");
+                        }
+                    } else{
+                        alert ("Unauthorised user !!!");
+                    }
+                   }
+            }
+         function isvalid(){
                 var user = document.form.user.value;
                 var pass = document.form.pass.value;
                 if(user.length=="" && pass.length==""){
